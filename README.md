@@ -36,6 +36,12 @@ go build .
 go build -o hello .
 ```
 
+## Escape Analysis
+
+```sh
+go run -gcflags="-m" main.go
+```
+
 ## debug mode 
 
 - symbol information and also DWARF information for the debugging purpose 
