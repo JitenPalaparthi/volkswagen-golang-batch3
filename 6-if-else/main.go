@@ -48,6 +48,7 @@ func main() {
 
 	str1 := "1231231"
 
+	//v,err:=
 	if v, err := strconv.Atoi(str1); err != nil {
 		println(err.Error())
 	} else {
@@ -55,7 +56,6 @@ func main() {
 	}
 
 	var any1 interface{} = "12312d"
-
 	if v, ok := any1.(int); !ok {
 		if v1, ok1 := any1.(string); ok1 {
 			if v2, err := strconv.Atoi(v1); err != nil {
