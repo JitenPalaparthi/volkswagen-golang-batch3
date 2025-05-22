@@ -31,15 +31,21 @@ func main() {
 	println("Address of arr1:", &arr1[0])
 	println("Address of Global1:", &Global1)
 	println("Address of Global2:", &Global2)
+	println()
 	PrintHeader("slice1", slice1)
-	PrintHeader("slice2", slice2)
+	//PrintHeader("slice2", slice2)
+	slice1 = append(slice1, 9999)
+	PrintHeader("slice1", slice1)
+
+	slice1 = append(slice1, 1111)
+	PrintHeader("slice1", slice1)
 
 }
 
 func PrintHeader(name string, slice []int) {
 	println("Address of ", name, ":", &slice)
 	for _, v := range slice {
-		print(v, "")
+		print(v, " ")
 	}
 	println()
 
@@ -48,6 +54,7 @@ func PrintHeader(name string, slice []int) {
 		println("Len of the ", name, ":", len(slice))
 		println("Cap of the ", name, ":", cap(slice))
 	}
+	println()
 }
 
 func SumOf(slice []int) int {
