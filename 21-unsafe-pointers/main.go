@@ -5,8 +5,11 @@ import (
 	"unsafe"
 )
 
+var GlobalInt int = 100
+
 func main() {
 
+	fmt.Println(&GlobalInt)
 	arr := [5]int{10, 11, 12, 13, 14}
 
 	// ptr1 := &arr[0]
@@ -25,10 +28,12 @@ func main() {
 		uintptr1 += unsafe.Sizeof(arr[i]) // 8 bytes farword for the original address
 	}
 
-	slice1 := []int{}
+	slice1 := []int{} // empty slice
+	slice2 := []int{} // empty slice
+
 	uintptr1 = uintptr(unsafe.Pointer(&slice1))
 	val := (*[3]int)(unsafe.Pointer(uintptr1)) // 3 and 2
-	fmt.Println((*val)[0])
+	fmt.Printf("Slice1 Ptr:0x%x\n", (*val)[0])
 	fmt.Println((*val)[1])
 	fmt.Println((*val)[2])
 	(*val)[0] = int(uintptr(unsafe.Pointer(&arr[0])))
@@ -36,6 +41,15 @@ func main() {
 	(*val)[2] = 5
 
 	fmt.Println(slice1)
+
+	uintptr1 = uintptr(unsafe.Pointer(&slice2))
+	val = (*[3]int)(unsafe.Pointer(uintptr1)) // 3 and 2
+	fmt.Printf("Slice2 Ptr:0x%x\n", (*val)[0])
+	fmt.Println((*val)[1])
+	fmt.Println((*val)[2])
+	(*val)[0] = int(uintptr(unsafe.Pointer(&arr[0])))
+	(*val)[1] = 5
+	(*val)[2] = 5
 
 	str1 := "Hello Wrold" // len : 11
 	//str1 = ""
