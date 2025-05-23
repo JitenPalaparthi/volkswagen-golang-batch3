@@ -96,9 +96,9 @@ GOOS=linux GOARCH=amd64 go build -o linux-demo
 
 tinyGo is the project, it uses LLVM. Tyny go is good for micro controllers and also wasm.
 
-## Keywords (15 of 25)
+## Keywords (20 of 25)
 
-break,case,const,continue,else,fallthrough,for,func,goto,if,import,package,range,switch,var
+break,case,const,continue,default,else,fallthrough,for,func,goto,if,import,map,package,range,return,struct,switch,type,var
 
 
 ## Builtin functions (14 of 18)

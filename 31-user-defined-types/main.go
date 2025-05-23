@@ -5,7 +5,7 @@ import "fmt"
 func main() {
 
 	r1 := Rect{L: 98.3, B: 78.45}
-	a1, p1 := Area(r1), Perimeter(r1)
+	a1, p1 := Area(&r1), Perimeter(&r1)
 	fmt.Printf("Area of Rect r1:%.3f\n", a1)
 	fmt.Printf("Perimeter of Rect r1:%.3f\n", p1)
 
@@ -39,17 +39,32 @@ func main() {
 
 }
 
+func (r *Rect) Area() float32 {
+	r.A = r.L * r.B
+	return r.A
+}
+
 type Rect struct {
 	L, B float32
 	A, P float32
 }
 
-func Area(r Rect) float32 {
+// func Area(r Rect) float32 {
+// 	r.A = r.L * r.B
+// 	return r.A
+// }
+
+// func Perimeter(r Rect) float32 {
+// 	r.P = 2 * (r.L + r.B)
+// 	return r.P
+// }
+
+func Area(r *Rect) float32 {
 	r.A = r.L * r.B
 	return r.A
 }
 
-func Perimeter(r Rect) float32 {
+func Perimeter(r *Rect) float32 {
 	r.P = 2 * (r.L + r.B)
 	return r.P
 }
@@ -68,11 +83,6 @@ func Perimeter(r Rect) float32 {
 
 func NewRect(l, b float32) *Rect {
 	return &Rect{L: l, B: b}
-}
-
-func (r *Rect) Area() float32 {
-	r.A = r.L * r.B
-	return r.A
 }
 
 // idiomatic approach is always use a single letter receiver
