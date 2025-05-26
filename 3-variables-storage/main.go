@@ -25,7 +25,7 @@ const GLOBALCONST = 100*HOUR + MIN + MAX/20 // what ever it does but possible
 
 func main() {
 	var global int = 100             // stack memory
-	var str1 = "Hello VolksWagon >🧩" // The str is in stack but the original data is in RO Data Segment
+	var str1 = "Hello VolksWagen >🧩" // The str is in stack but the original data is in RO Data Segment
 	println(global, str1)
 
 	var str2 = "Hello Universe!, how are you doing >🧩"

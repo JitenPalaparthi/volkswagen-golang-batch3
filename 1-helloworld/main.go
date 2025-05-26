@@ -1,6 +1,6 @@
 package main
 
 func main() {
-	println("Hello VolksWagon!")
+	println("Hello VolksWagen!")
 	Greet()
 }

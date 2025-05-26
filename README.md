@@ -105,3 +105,21 @@ break,case,const,continue,default,else,fallthrough,for,func,goto,if,import,map,p
 
 append,cap,complex,clear,copy,delete,imag,len,make,max,min,new,print,println,real
 
+
+
+## Git repo
+git@github.com:JitenPalaparthi/volkswagen-golang-batch3.git
+
+
+## Package management
+
+```sh
+go get github.com/rs/zerolog
+go mod tidy
+```
+
+- to create a vendor directory (to keep the source code of others). It creates a vendor directory and keeps the whole source code
+
+```sh
+go mod vendor
+```

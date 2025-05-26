@@ -49,7 +49,7 @@ func main() {
 	var a1 = 987                  // the type is automatically inferred based on the balue
 	var f1 = 123.23               // type is inferred as float64
 	var ok3 = true                // type is inferred as bool
-	var str3 = "Hello VolksWagon" // type is inferred as string
+	var str3 = "Hello VolksWagen" // type is inferred as string
 
 	var age1 uint8 = 42
 	var age2 = 42 // age should be a simple uint8 but here it is int
