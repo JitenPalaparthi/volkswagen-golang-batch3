@@ -12,13 +12,13 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
-// func init() {
-// 	println("main calling --1 in utils")
-// }
+func init() {
+	println("main calling --1 in utils")
+}
 
-// func init() {
-// 	println("main calling --2 in utils")
-// }
+func init() {
+	println("main calling --2 in utils")
+}
 
 var (
 	PORT string
@@ -34,6 +34,10 @@ func main() {
 
 	//args := os.Args
 	//fmt.Println(args)
+
+	// println("--------> assigning filename")
+	// utils.Filename = "users.txt"
+	// utils.Process("users.dat")
 
 	PORT = os.Getenv("PORT")
 	if PORT == "" {

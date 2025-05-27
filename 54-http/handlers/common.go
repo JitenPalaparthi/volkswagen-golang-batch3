@@ -3,11 +3,11 @@ package handlers
 import "net/http"
 
 func init() {
-	println("handler calling --1 in utils")
+	println("handler calling --1 in handlers")
 }
 
 func init() {
-	println("Handler calling --2 in utils")
+	println("Handler calling --2 in handlers")
 }
 
 func Ping(w http.ResponseWriter, r *http.Request) {

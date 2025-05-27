@@ -14,9 +14,10 @@ func init() {
 }
 
 type User struct {
-	Id          uint   `json:"id" yaml:"id"`
-	Name        string `json:"name" yaml:"name"`
-	Email       string `json:"email"`
+	//gorm.Model
+	Id          uint   `json:"id" gorm:"primaryKey"`
+	Name        string `json:"name"`
+	Email       string `json:"email" gorm:"unique"`
 	Mobile      string `json:"mobile"`
 	Status      string `json:"status"`
 	LastModifed uint64 `json:"last_modified"`

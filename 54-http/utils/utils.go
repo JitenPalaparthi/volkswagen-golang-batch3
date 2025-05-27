@@ -12,14 +12,26 @@ var UserErrorChan chan error
 
 const FILENAME string = "users.txt"
 
-func init() {
+// var Filename string
+
+func init() { // it is a special method
 	UserChan = make(chan *models.User)
 	UserErrorChan = make(chan error)
 	go ProcessUsers(FILENAME)
 	go ProcessErrors()
 }
 
-func Init(fileName string) { // if you want to save to a non constant file name, call this in main
+func init() {
+	println("calling init in utils-2")
+}
+func init() {
+	println("calling init in utils-3")
+}
+func init() {
+	println("calling init in utils-4")
+}
+
+func Process(fileName string) { // if you want to save to a non constant file name, call this in main
 	UserChan = make(chan *models.User)
 	UserErrorChan = make(chan error)
 	go ProcessUsers(fileName)
