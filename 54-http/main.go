@@ -61,6 +61,7 @@ func main() {
 	if err := http.ListenAndServe(":"+PORT, nil); err != nil {
 		log.Error().Msg(err.Error())
 		close(utils.UserChan)
+		close(utils.UserErrorChan)
 		runtime.Goexit()
 	}
 }
