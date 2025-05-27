@@ -20,7 +20,6 @@ func main() {
 		println(c)
 	}
 	//	<-sig
-
 }
 
 func GenFib(c int, name string) chan string {
