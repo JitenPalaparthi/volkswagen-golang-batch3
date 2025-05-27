@@ -57,5 +57,3 @@ func (u *UserDB) DeleteBy(id string) error {
 	}
 	return nil
 }
-
-// https://www.youtube.com/playlist?list=PLJE7PIP1qj_Rn9vq4V4jGJbj5KqEIWSUc
